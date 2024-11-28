@@ -3,13 +3,20 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import index from "/public/imgs/index.webp";
+import caribien from "/public/imgs/caribien.webp";
+import om_os from "/public/imgs/om_os.webp";
+import olivia from "/public/imgs/olivia.webp";
+import emma from "/public/imgs/emma.webp";
+import oskar from "/public/imgs/oskar.webp";
+import fie from "/public/imgs/fie.webp";
 ---
 
 <MainLayout title="Höjskolendk">
   <!-- HERO -->
   <section>
     <h1 class="font-headline text-h1 text-neutrals-950">Hello</h1>
+    <Image src={index} alt="" />
   </section>
 
   <!-- REJSEPAKKER -->
@@ -40,23 +47,35 @@ import thumbsup from "../assets/images/thumbsup.png";
   <!-- OM OS -->
   <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center m-lg">
     <div>
-      <h2 class="text-neutrals-950 font-bold text-h2 font-headline mb-m"> 
+      <h2 class="text-neutrals-950 font-bold text-h2 font-headline mb-m">
         Siden 2014 har vi sørget for eventyr
       </h2>
       <p class="mb-s text-neutrals-950 font-regular text-body">
-        HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet.
+        HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi
+        brænder for oplevelser, fællesskab og mødet med nye mennesker og
+        kulturer; derfor laver vi eventyrlige højskoleophold i udlandet.
       </p>
       <p class="mb-s text-neutrals-950 font-regular text-body">
-        HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.
+        HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er
+        vild med højskolefællesskab, vil med på et fantastisk rejseeventyr,
+        glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk,
+        drømmer om en fed grupperejse med andre skønne unge, vil opleve et
+        stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du
+        er sikker på en tryg rejseoplevelse da vi er medlem af
+        Rejsegarantifonden.
       </p>
       <p class="mb-s text-neutrals-950 font-regular text-body">
         Vi glæder os til at lære dig at kende!
       </p>
-      <Button></Button>
+      <Button />
     </div>
 
     <div class="m-lg">
-      <img src="" alt="Billede af glade højskole elever i naturen" class="w-full h-auto rounded">
+      <img
+        src=""
+        alt="Billede af glade højskole elever i naturen"
+        class="w-full h-auto rounded"
+      />
     </div>
   </section>
 
