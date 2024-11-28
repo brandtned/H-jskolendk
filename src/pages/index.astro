@@ -24,7 +24,7 @@ import fie from "/public/imgs/fie.webp";
   <section></section>
 
   <!-- INFOMØDE -->
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center m-lg">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-start m-lg">
     <div>
       <h2 class="text-neutrals-950 font-bold text-h2 font-headline mb-m">Kom til infomøde</h2>
       <p class="mb-s text-neutrals-950 font-regular text-body">
@@ -33,70 +33,99 @@ import fie from "/public/imgs/fie.webp";
       <p class="mb-s text-neutrals-950 font-regular text-body">
         Vi afholder infomøder i København og Aarhus – eller du kan møde os på et af vores online infomøder. 
       </p>
-
-      <h4>KØBENHAVN</h4>
-      <p>16 JANUAR 2025</p>
-      <h4>AARHUS</h4>
-      <p>14 JANUAR 2025</p>
-      <h4>ONLINE INFOMØDE</h4>
-      <p>13 NOVEMBER 2024</p>
-      <p>21 JANUAR 2025</p>
+  
+      <div class="space-y-6 mt-2xl">
+        <div>
+          <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">KØBENHAVN</h4>
+          <p class="text-sm m-xxxs">
+            <span class="font-bold text-orange-500">16 JANUAR 2025</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+        </div>
+        
+        <div class="mt-m">
+          <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">AARHUS</h4>
+          <p class="text-sm m-xxxs">
+            <span class="font-bold text-orange-500">14 JANUAR 2025</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+        </div>
+        
+        <div class="mt-m">
+          <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">ONLINE INFOMØDE</h4>
+          <p class="text-sm m-xxxs mt-xxs">
+            <span class="font-bold text-orange-500">13 NOVEMBER 2024</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+          <p class="text-sm m-xxxs mt-xxs">
+            <span class="font-bold text-orange-500">21 JANUAR 2025</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+        </div>
+      </div>
     </div>
     
-    <div class="min-h-screen flex items-center justify-center">
-      <form class="bg-yellow-500 p-8 w-full h-full">
-        <!-- Overskrift -->
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Tilmeld dig infomødet</h2>
+    <div class="flex items-start justify-center px-10">
+      <form class="bg-yellow-500 py-ml px-sm w-full max-w-xl">
+  
+        <h2 class="text-neutrals-950 font-bold text-h3 font-headline mb-sm text-center">Tilmeld dig infomødet</h2>
         
-        <!-- Input felter -->
+        <!-- form -->
         <div class="space-y-4">
           <input
-            type="text"
+            type="number"
             placeholder="Vælg infomøde*"
-            class="w-full px-4 py-2"
+            class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
           <input
             type="text"
             placeholder="Dit fulde navn*"
-            class="w-full px-4 py-2"
+            class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
           <input
             type="tel"
             placeholder="Telefon"
-            class="w-full px-4 py-2"
+            class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
           <input
             type="email"
             placeholder="E-mail"
-            class="w-full px-4 py-2"
+            class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
           <input
             type="text"
             placeholder="Hvor mange deltagere kommer I?*"
-            class="w-full px-4 py-2"
+            class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
           <input
             type="text"
             placeholder="Hvilken destination er du interesseret i?*"
-            class="w-full px-4 py-2"
-          />
+            class="w-full p-s py-4 border-none focus:ring-0 m-xxs">
+
+          <p class="text-neutrals-950 font-light m-xs">*Disse felter skal udfyldes / vælges</p>
         </div>
-    
-        <!-- Afkrydsningsbokse -->
-        <div class="mt-4 space-y-2">
-          <label class="flex items-center">
-            <input type="checkbox" class="form-checkbox" />
-            <span class="ml-2 text-gray-700">Ved tilmelding giver du os tilladelse til at kontakte dig m. påmindelser og opfølgning.</span>
+        
+     
+        <div class="space-y-2">
+          <label class="flex items-center m-xs">
+            <input type="checkbox" class="w-sm h-sm form-checkbox border-none focus:ring-0"/>
+            <span class="ml-2 text-neutrals-950 italic font-light m-xxxs">Ved tilmelding giver du os tilladelse til at kontakte dig m. påmindelser og opfølgning.</span>
           </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="form-checkbox text-blue-500 rounded focus:ring-2 focus:ring-blue-500" />
-            <span class="ml-2 text-gray-700">Tilmeld mig nyhedsbrevet</span>
+          <label class="flex items-center m-xs">
+            <input type="checkbox" class="w-sm h-sm form-checkbox border-none focus:ring-0" />
+            <p class="text-sm text-neutrals-950 font-light italic m-xxxs">
+              Jeg har læst jeres 
+              <span class="text-orange-500">privatlivspolitik</span> og 
+              <span class="text-orange-500">generelle bestemmelser</span> og er indforstået med begge.*
+            </p>
           </label>
         </div>
-    
-        <!-- Knap -->
-       <Button>TILMELD DIG INFOMØDET</Button>
+
+         <div class="mt-m">
+          <Button>TILMELD DIG INFOMØDET</Button>
+        </div>
       </form>
+      
     </div>
   </section>
 
