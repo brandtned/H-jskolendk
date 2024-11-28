@@ -11,24 +11,58 @@ import index from "/public/imgs/index.webp";
   <section class="relative">
     <Image
       src={index}
-      alt=""
+      alt="Unge mennesker der bader ved et vandfald"
       class="w-full h-screen object-cover object-bottom"
     />
-    <h1 class="font-headline text-h2 text-yellow-500 absolute top-4xl">
+    <h1 class="font-headline text-h2 text-yellow-500 absolute top-2xl left-lg">
       Vores mest populære rejsepakker
     </h1>
-    <RejseCard
-      cardimage="ballroom.jpg"
-      cardimagealt="Et par der danser ballroom"
-      badgenyt="true"
-      badgerabat="true"
-      badgerabatsats="10%"
-      badgefaapladser="true"
-      rejsenavn="Ballroom for begyndere"
-      varighed="Fredag 20-22"
-      afrejsedatoer="25+"
-      program="Begynder"
-      pris="20"
-    />
+    <div
+      class="absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] w-full"
+    >
+      <RejseCard
+        cardimage="/public/imgs/caribien.webp"
+        cardimagealt="Unge mennesker der vandrer på en klippe foran en strand"
+        badgenyt="true"
+        badgerabat="true"
+        badgerabatsats="10%"
+        badgefaapladser="true"
+        rejsenavn="CARIBIEN, HAWAII & MEXICO"
+        varighed="3 måneder"
+        afrejsedatoer="20. okt 2024"
+        program1="New York City, USA"
+        program2="Oahu, Hawaii"
+        program3="Playa del Carmen, Mexico"
+        program4="St. Croix & Puerto Rico, Caribien"
+        program5="Friuge"
+        pris="67.900 DKK"
+      />
+    </div>
+    <div class="flex gap-xxs absolute bottom-lg left-[50%] translate-x-[-50%]">
+      <div class="border-2 border-orange-500 p-xs rounded-full inline-block">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21"
+          height="21"
+          viewBox="0 0 14 21"
+          fill="none"
+        >
+          <path d="M13 1L2 10.5L13 20" stroke="#FE6E1F" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div
+        class="bg-orange-500 border-2 border-orange-500 p-xs rounded-full inline-block"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21"
+          height="21"
+          viewBox="0 0 14 21"
+          fill="none"
+        >
+          <path d="M1 1L12 10.5L1 20" stroke="#FAF3E1" stroke-width="2"></path>
+        </svg>
+      </div>
+    </div>
   </section>
 </MainLayout>

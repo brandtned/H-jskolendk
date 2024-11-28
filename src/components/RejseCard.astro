@@ -13,17 +13,24 @@ const {
   rejsenavn = "",
   varighed = "",
   afrejsedatoer = "",
+  program1 = "",
+  program2 = "",
+  program3 = "",
+  program4 = "",
+  program5 = "",
   pris = "",
 } = Astro.props;
 ---
 
-<article class="bg-neutrals-50 shadow-drop25 m-lg flex flex-row h-9xl relative">
-  <img src="/public/imgs/caribien.webp" alt="" class="object-cover w-[450px]" />
+<article
+  class="bg-neutrals-50 shadow-drop25 flex flex-row h-9xl relative mx-auto max-w-max w-full"
+>
+  <img src={cardimage} alt={cardimagealt} class="object-cover w-[500px]" />
 
   <div class="flex flex-col gap-lg p-sm">
     <div class="flex flex-col gap-sm">
       <p class="font-headline text-h3 font-bold text-neutrals-950">
-        CARIBIEN, HAWAII & MEXICO
+        {rejsenavn}
       </p>
 
       <div class="flex gap-m">
@@ -43,7 +50,7 @@ const {
               VARIGHED:
             </p>
           </div>
-          <p class="pl-sm">3 måneder</p>
+          <p class="pl-sm">{varighed}</p>
         </div>
         <div>
           <div class="flex items-center gap-xxs">
@@ -61,7 +68,7 @@ const {
               AFREJSEDATOER:
             </p>
           </div>
-          <p class="pl-sm">20. okt 2024</p>
+          <p class="pl-sm">{afrejsedatoer}</p>
         </div>
         <div>
           <div class="flex items-center gap-xxs">
@@ -81,23 +88,23 @@ const {
           </div>
           <div class="flex gap-xxxs pl-sm">
             <p class="font-semibold">Introdage:</p>
-            <p>New York City, USA</p>
+            <p>{program1}</p>
           </div>
           <div class="flex gap-xxxs pl-sm">
             <p class="font-semibold">1. måned:</p>
-            <p>Oahu, Hawaii</p>
+            <p>{program2}</p>
           </div>
           <div class="flex gap-xxxs pl-sm">
             <p class="font-semibold">2. måned:</p>
-            <p>Playa del Carmen, Mexico</p>
+            <p>{program3}</p>
           </div>
           <div class="flex gap-xxxs pl-sm">
             <p class="font-semibold">3. måned:</p>
-            <p>St. Croix & Puerto Rico, Caribien</p>
+            <p>{program4}</p>
           </div>
           <div class="flex gap-xxxs pl-sm">
             <p class="font-semibold">Uge 4:</p>
-            <p>Friuge</p>
+            <p>{program5}</p>
           </div>
         </div>
       </div>
