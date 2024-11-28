@@ -89,6 +89,7 @@ export default {
 
         /* WEIGHT */
           fontWeight: {
+            extralight: '200',
             light: '300',
             regular: '400',
             semibold: '500',
