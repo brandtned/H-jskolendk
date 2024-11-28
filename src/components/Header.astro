@@ -16,13 +16,13 @@ import logo from "/public/imgs/logo.svg";
     <div id="navbar" class="flex flex-row justify-between items-center">
       <!-- Logo -->
       <div id="logo" class="p-s">
-        <a href="/"><Image src={logo} alt="Plastic Change logo" /></a>
+        <a href="/"><Image src={logo} alt="Højskolendk logo" /></a>
       </div>
 
       <!-- Burger menu -->
       <button
         id="burgermenu"
-        class="z-50 p-xs cursor-pointer"
+        class="z-50 p-xs cursor-pointer bg-orange-500"
         x-on:click="showmenu = ! showmenu"
       >
         <!-- Burger icon -->
@@ -36,8 +36,8 @@ import logo from "/public/imgs/logo.svg";
           class="size-10"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke-linecap=""
+            stroke-linejoin=""
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
 
@@ -51,10 +51,8 @@ import logo from "/public/imgs/logo.svg";
           stroke="rgba(250, 243, 225, 1)"
           class="size-10"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"></path>
+          <path stroke-linecap="" stroke-linejoin="" d="M6 18L18 6M6 6l12 12"
+          ></path>
         </svg>
       </button>
     </div>
@@ -62,7 +60,7 @@ import logo from "/public/imgs/logo.svg";
     <!-- Mobil menu -->
     <nav
       id="mobilmenu"
-      class="flex flex-col gap-6 bg-orange-500 h-screen w-9xl pl-14 pt-24 absolute top-0 z-10 right-0"
+      class="flex flex-col gap-6 bg-orange-500 h-screen w-9xl pl-14 pt-24 absolute top-0 z-10 right-[70px]"
       x-show="showmenu"
       x-transition
       x-on:click="showmenu = false"
@@ -73,19 +71,22 @@ import logo from "/public/imgs/logo.svg";
           <Link href="/rejser">Rejsepakker</Link>
         </li>
         <li class="py-3">
-          <Link href="#">Infomøder</Link>
+          <Link href="#infomøder">Infomøder</Link>
         </li>
         <li class="py-3">
-          <Link href="#">Rejseblogs</Link>
+          <Link href="#rejseblogs">Rejseblogs</Link>
         </li>
         <li class="py-3">
-          <Link href="#">Rejse med Höjskolen</Link>
+          <Link href="#rejse_med_hojskolendk">Rejse med Höjskolen</Link>
         </li>
         <li class="py-3">
-          <Link href="#">Om os</Link>
+          <Link href="#om_os">Om os</Link>
         </li>
         <li class="py-3">
-          <Link href="#">FAQ</Link>
+          <Link href="#faq">FAQ</Link>
+        </li>
+        <li class="py-3">
+          <Link href="#anmeldelser">Anmeldelser</Link>
         </li>
       </ul>
     </nav>

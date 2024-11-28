@@ -31,8 +31,12 @@ const { title } = Astro.props;
       <Header />
     </header>
 
-    <main>
+    <main class="md:mr-[72px] relative">
       <slot />
+      <div
+        class="absolute left-full top-[70px] w-full h-full bg-yellow-500 hidden md:block"
+      >
+      </div>
     </main>
 
     <footer>

@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import CarouselBtns from "../components/CarouselBtns.astro";
+import RejseCard from "../components/RejseCard.astro";
 import { Image } from "astro:assets";
 import index from "/public/imgs/index.webp";
 import caribien from "/public/imgs/caribien.webp";
@@ -15,13 +17,16 @@ import fie from "/public/imgs/fie.webp";
 <MainLayout title="Höjskolendk">
   <!-- HERO -->
 
-  <section>
+  <section class="mb-xl relative">
     <div class="text-yellow-500">
-      <Image
-        src={index}
-        alt=""
-        class="object-cover object-bottom relative w-full h-screen"
-      />
+      <div class="relative">
+        <Image
+          src={index}
+          alt=""
+          class="object-cover object-bottom relative w-full h-screen"
+        />
+        <div class="absolute inset-0 bg-orange-500-filter"></div>
+      </div>
 
       <div
         class="w-full max-w-[781px] h-auto text-left absolute top-[50%] left-0 p-4 sm:p-6 md:p-8 transform -translate-y-1/2 ml-xl"
@@ -47,15 +52,77 @@ import fie from "/public/imgs/fie.webp";
   </section>
 
   <!-- REJSEPAKKER -->
-  <section></section>
+  <section class="flex flex-col gap-m mb-4xl">
+    <div class="flex justify-between items-center mx-lg">
+      <h2 class="font-headline font-bold text-h2 text-neutrals-950">
+        Vores rejsepakker
+      </h2>
+      <CarouselBtns />
+    </div>
+    <!-- <div class="flex gap-xs">
+      <div class="flex flex-col gap-xs">
+        <div class="relative">
+          <Image src={caribien} alt="" class="object-cover aspect-[5.5/3]" />
+          <div class="absolute inset-0 bg-orange-500-filter"></div>
+        </div>
+        <div class="flex flex-col gap-sm">
+          <div class="flex flex-col gap-xxs">
+            <p class="text-h5 text-orange-500">3 MÅNEDER</p>
+            <p class="text-h3 font-bold font-headline text-neutrals-950">
+              CARIBIEN, HAWAII & MEXICO
+            </p>
+          </div>
+          <Button>Se rejse</Button>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-xs">
+        <div class="relative">
+          <Image src={om_os} alt="" class="object-cover aspect-[5.5/3]" />
+          <div class="absolute inset-0 bg-orange-500-filter"></div>
+        </div>
+        <div class="flex flex-col gap-sm">
+          <div class="flex flex-col gap-xxs">
+            <p class="text-h5 text-orange-500">3 MÅNEDER</p>
+            <p class="text-h3 font-bold font-headline text-neutrals-950">
+              AUSTRALIEN, NZ, BALI
+            </p>
+          </div>
+          <Button>Se rejse</Button>
+        </div>
+      </div>
+    </div> -->
+    <div>
+      <RejseCard
+        cardimage="/public/imgs/caribien.webp"
+        cardimagealt="Unge mennesker der vandrer på en klippe foran en strand"
+        badgenyt="true"
+        badgerabat="true"
+        badgerabatsats="10%"
+        badgefaapladser="true"
+        rejsenavn="CARIBIEN, HAWAII & MEXICO"
+        varighed="3 måneder"
+        afrejsedatoer="20. okt 2024"
+        program1="New York City, USA"
+        program2="Oahu, Hawaii"
+        program3="Playa del Carmen, Mexico"
+        program4="St. Croix & Puerto Rico, Caribien"
+        program5="Friuge"
+        pris="67.900 DKK"
+      />
+    </div>
+  </section>
 
   <!-- INFOMØDE -->
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-start m-lg">
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-start m-lg"
+    id="infomøde"
+  >
     <div class="pr-8">
       <h2 class="text-neutrals-950 font-bold text-h2 font-headline mb-m">
         Kom til infomøde
       </h2>
-      <p class="mb-m text-neutrals-950 font-regular text-body">
+      <p class="mb-s text-neutrals-950 font-regular text-body">
         Hvis du drømmer om et fantastisk rejseeventyr med masser af adventure,
         vilde naturoplevelser, spændende kulturmøder og et stærkt
         højskole-fællesskab, så hop med på et af vores hyggelige infomøder.
@@ -185,22 +252,23 @@ import fie from "/public/imgs/fie.webp";
   </section>
 
   <!-- REJSEBLOGS -->
-  <section>
+  <section class="my-4xl" id="rejseblogs">
     <div class="text-center m-lg">
       <h2 class="text-neutrals-950 font-bold text-h2 font-headline">
         Rejseblogs fra tidligere rejsende
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-xs">
       <!-- olivia -->
       <div class="flex flex-col items-center text-center p-xs">
-        <div class="w-full h-[312px] overflow-hidden">
+        <div class="w-full h-[312px] overflow-hidden relative">
           <Image
             src={olivia}
             alt="Olivias beretning"
             class="w-full h-full object-cover"
           />
+          <div class="absolute inset-0 bg-orange-500-filter"></div>
         </div>
         <p class="text-sm font-medium m-xs text-orange-500">
           OLIVIAS BERETNING
@@ -217,12 +285,13 @@ import fie from "/public/imgs/fie.webp";
 
       <!-- emma -->
       <div class="flex flex-col items-center text-center p-xs">
-        <div class="w-full h-[312px] overflow-hidden">
+        <div class="w-full h-[312px] overflow-hidden relative">
           <Image
             src={emma}
             alt="Olivias beretning"
             class="w-full h-full object-cover"
           />
+          <div class="absolute inset-0 bg-orange-500-filter"></div>
         </div>
         <p class="text-sm font-medium m-xs text-orange-500">EMMAS BERETNING</p>
         <h4
@@ -237,12 +306,13 @@ import fie from "/public/imgs/fie.webp";
 
       <!-- oskar -->
       <div class="flex flex-col items-center text-center p-xs">
-        <div class="w-full h-[312px] overflow-hidden">
+        <div class="w-full h-[312px] overflow-hidden relative">
           <Image
             src={oskar}
             alt="Olivias beretning"
             class="w-full h-full object-cover"
           />
+          <div class="absolute inset-0 bg-orange-500-filter"></div>
         </div>
         <p class="text-sm font-medium m-xs text-orange-500">OSKARS BERETNING</p>
         <h4
@@ -257,12 +327,13 @@ import fie from "/public/imgs/fie.webp";
 
       <!-- fie -->
       <div class="flex flex-col items-center text-center p-xs">
-        <div class="w-full h-[312px] overflow-hidden">
+        <div class="w-full h-[312px] overflow-hidden relative">
           <Image
             src={fie}
             alt="Olivias beretning"
             class="w-full h-full object-cover"
           />
+          <div class="absolute inset-0 bg-orange-500-filter"></div>
         </div>
         <p class="text-sm font-medium m-xs text-orange-500">FIES BERETNING</p>
         <h4
@@ -278,7 +349,7 @@ import fie from "/public/imgs/fie.webp";
   </section>
 
   <!-- NÅR DU REJSER MED HÖJSKOLENDK -->
-  <section>
+  <section id="rejse_med_hojskolendk">
     <div class="text-center m-lg">
       <h2 class="text-neutrals-950 font-bold text-h2 font-headline">
         Når du rejser med Höjskolen
@@ -444,7 +515,10 @@ import fie from "/public/imgs/fie.webp";
   </section>
 
   <!-- OM OS -->
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center m-lg">
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center m-lg"
+    id="om_os"
+  >
     <div>
       <h2 class="text-neutrals-950 font-bold text-h2 font-headline mb-m">
         Siden 2014 har vi sørget for eventyr
@@ -471,13 +545,18 @@ import fie from "/public/imgs/fie.webp";
       </div>
     </div>
 
-    <div class="m-lg object-bottom">
-      <Image src={om_os} alt="Højskoleelever der vinker i naturen" />
+    <div class="m-lg relative">
+      <Image
+        src={om_os}
+        alt="Højskoleelever der vinker i naturen"
+        class="object-bottom object-cover aspect-[3/3]"
+      />
+      <div class="absolute inset-0 bg-orange-500-filter"></div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="m-xl mb-4xl">
+  <section class="m-xl mb-4xl" id="faq">
     <h2 class="font-headline text-h2 font-bold mb-m text-neutrals-950">FAQ</h2>
     <div class="flex flex-col gap-s">
       <div x-data="{ open: false }" class="bg-neutrals-50 shadow-drop25 p-m">
@@ -740,16 +819,19 @@ import fie from "/public/imgs/fie.webp";
     </div>
   </section>
 
-  <!-- REVIEWS -->
+  <!-- ANMELDELSER -->
 
-  <section class="mb-2xl">
+  <section class="mb-4xl" id="anmeldelser">
     <div class="m-lg relative">
       <!-- Billede -->
-      <img
-        src="/public/imgs/caribien.webp"
-        alt="caribien"
-        class="object-cover object-top w-full h-[300px] sm:h-[400px] md:h-[500px]"
-      />
+      <div class="relative">
+        <img
+          src="/public/imgs/caribien.webp"
+          alt="caribien"
+          class="object-cover object-top w-full h-[300px] sm:h-[400px] md:h-[500px]"
+        />
+        <div class="absolute inset-0 bg-orange-500-filter"></div>
+      </div>
       <!-- Overlay -->
       <div
         class="w-full max-w-[781px] h-auto bg-neutrals-50 text-center absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] p-4 sm:p-6 md:p-8"
@@ -773,69 +855,42 @@ import fie from "/public/imgs/fie.webp";
           </p>
         </div>
       </div>
-      <div
-        class="flex gap-xxs left-[50%] translate-x-[-50%] absolute -bottom-xl"
-      >
-        <div class="border-2 border-orange-500 p-xs rounded-full inline-block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 14 21"
-            fill="none"
-          >
-            <path d="M13 1L2 10.5L13 20" stroke="#FE6E1F" stroke-width="2"
-            ></path>
-          </svg>
-        </div>
-        <div
-          class="bg-orange-500 border-2 border-orange-500 p-xs rounded-full inline-block"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 14 21"
-            fill="none"
-          >
-            <path d="M1 1L12 10.5L1 20" stroke="#FAF3E1" stroke-width="2"
-            ></path>
-          </svg>
-        </div>
+      <div class="left-[50%] translate-x-[-50%] absolute -bottom-xl">
+        <CarouselBtns />
       </div>
     </div>
   </section>
 
   <!-- FIRE BOKSE -->
   <section
-    class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 items-center text-center m-lg mb-5xl"
+    class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 items-center text-center m-lg mb-[70px]"
   >
     <!-- første sektion -->
     <div
-      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto"
+      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto flex flex-col justify-center items-center"
     >
-      <h5 class="text-h5">Glade & skønne elever</h5>
+      <h5 class="text-h5 text-neutrals-950">Glade & skønne elever</h5>
       <h5 class="text-h5 text-orange-500">2.000 +</h5>
     </div>
     <!-- anden sektion -->
     <div
-      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto"
+      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto flex flex-col justify-center items-center"
     >
-      <h5 class="text-h5">Anbefaler Höjskolendk</h5>
+      <h5 class="text-h5 text-neutrals-950">Anbefaler Höjskolendk</h5>
       <h5 class="text-h5 text-orange-500">94%</h5>
     </div>
     <!-- tredje sektion -->
     <div
-      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto"
+      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto flex flex-col justify-center items-center"
     >
-      <h5 class="text-h5">Trustpilot</h5>
+      <h5 class="text-h5 text-neutrals-950">Trustpilot</h5>
       <h5 class="text-h5 text-orange-500">4.8 / 5</h5>
     </div>
     <!-- fjerde sektion -->
     <div
-      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto"
+      class="w-full max-w-[286px] h-[150px] p-m bg-neutrals-50 shadow-drop25 mx-auto flex flex-col justify-center items-center"
     >
-      <h5 class="text-h5">Tilfreds efter ophold</h5>
+      <h5 class="text-h5 text-neutrals-950">Tilfreds efter ophold</h5>
       <h5 class="text-h5 text-orange-500">8.7 / 10</h5>
     </div>
   </section>

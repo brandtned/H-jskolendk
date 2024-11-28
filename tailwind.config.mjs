@@ -43,6 +43,7 @@ export default {
             "orange-50": "rgba(255, 242, 235, 1)",
             'white': '#fff',
             'black': '#000',
+            "orange-500-filter": "rgba(254, 110, 31, 0.10)",
           },
                   
           /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
@@ -121,7 +122,8 @@ export default {
 
         /* BOXSHADOW */
         boxShadow: {
-            drop25: '4px 4px 4px 4px rgb(34 34 34 / 0.25)', /* x y blur spread farve / opacity */
+            drop15: '2px 2px 2px 2px rgb(34 34 34 / 0.15)', /* x y blur spread farve / opacity */
+            drop25: '4px 4px 4px 4px rgb(34 34 34 / 0.25)',
             drop50: '4px 4px 4px 0 rgb(34 34 34 / 0.50)',  
             inner25: '0 4px 4px 0 rgb(34 34 34 / 0.25) inset',  
             inner50: '0 4px 4px 0 rgb(34 34 34 / 0.50) inset',  
