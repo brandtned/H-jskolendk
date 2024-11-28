@@ -50,41 +50,68 @@ import fie from "/public/imgs/fie.webp";
   <section></section>
 
   <!-- INFOMØDE -->
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center m-lg">
-    <div>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-start m-lg">
+   
+    <div class="pr-8">
       <h2 class="text-neutrals-950 font-bold text-h2 font-headline mb-m">
         Kom til infomøde
       </h2>
-      <p class="mb-s text-neutrals-950 font-regular text-body">
+      <p class="mb-m text-neutrals-950 font-regular text-body">
         Hvis du drømmer om et fantastisk rejseeventyr med masser af adventure,
         vilde naturoplevelser, spændende kulturmøder og et stærkt
         højskole-fællesskab, så hop med på et af vores hyggelige infomøder.
       </p>
-      <p class="mb-s text-neutrals-950 font-regular text-body">
+      <p class="mb-m text-neutrals-950 font-regular text-body">
         Vi afholder infomøder i København og Aarhus – eller du kan møde os på et
         af vores online infomøder.
       </p>
-
-      <h4>KØBENHAVN</h4>
-      <p>16 JANUAR 2025</p>
-      <h4>AARHUS</h4>
-      <p>14 JANUAR 2025</p>
-      <h4>ONLINE INFOMØDE</h4>
-      <p>13 NOVEMBER 2024</p>
-      <p>21 JANUAR 2025</p>
-    </div>
-
-    <div class="flex items-center justify-center px-10">
-      <form class="bg-yellow-500 py-ml px-sm w-full max-w-xl flex flex-col items-center">
-        <!-- Overskrift -->
-        <h2 class="text-neutrals-950 font-bold text-h3 font-headline mb-sm text-center">
-          Tilmeld dig infomødet
-        </h2>
+ 
+      <div class="space-y-6">
+        <div>
+          <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">
+            KØBENHAVN
+          </h4>
+          <p class="text-sm m-xxxs">
+            <span class="font-bold text-orange-500">16 JANUAR 2025</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+        </div>
     
-        <!-- Input felter -->
+        <div>
+          <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">
+            AARHUS
+          </h4>
+          <p class="text-sm m-xxxs">
+            <span class="font-bold text-orange-500">14 JANUAR 2025</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+        </div>
+    
+        <div>
+          <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">
+            ONLINE INFOMØDE
+          </h4>
+          <p class="text-sm m-xxxs">
+            <span class="font-bold text-orange-500">13 NOVEMBER 2024</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+          <p class="text-sm m-xxxs">
+            <span class="font-bold text-orange-500">21 JANUAR 2025</span> 
+            <span class="font-regular text-neutrals-950">| KL. 17-19</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Formular -->
+    <div class="pl-8">
+      <form class="bg-yellow-500 py-ml px-sm w-full max-w-xl flex flex-col items-center">
+
+        <h2 class="text-neutrals-950 font-bold text-h3 font-headline mb-sm text-center">Tilmeld dig infomødet</h2>
+
         <div class="space-y-4 w-full">
           <input
-            type="text"
+            type="number"
             placeholder="Vælg infomøde*"
             class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
@@ -113,9 +140,9 @@ import fie from "/public/imgs/fie.webp";
             placeholder="Hvilken destination er du interesseret i?*"
             class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
+          <p class="text-neutrals-950 font-regular m-xs">*Disse felter skal udfyldes / vælges</p>
         </div>
     
-        <!-- Afkrydsningsbokse -->
         <div class="space-y-4 w-full mt-m">
           <label class="flex items-center">
             <input
@@ -139,8 +166,7 @@ import fie from "/public/imgs/fie.webp";
           </label>
         </div>
     
-        <!-- Knap -->
-        <div class="mt-m w-full flex justify-center">
+        <div class="mt-m w-full m-m">
           <Button>TILMELD DIG INFOMØDET</Button>
         </div>
       </form>
