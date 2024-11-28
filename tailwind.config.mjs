@@ -121,10 +121,10 @@ export default {
 
         /* BOXSHADOW */
         boxShadow: {
-            drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */
-            drop50: '4px 4px 4px 0 rgb(0 0 0 / 0.50)',  
-            inner25: '0 4px 4px 0 rgb(0 0 0 / 0.25) inset',  
-            inner50: '0 4px 4px 0 rgb(0 0 0 / 0.50) inset',  
+            drop25: '4px 4px 4px 4px rgb(34 34 34 / 0.25)', /* x y blur spread farve / opacity */
+            drop50: '4px 4px 4px 0 rgb(34 34 34 / 0.50)',  
+            inner25: '0 4px 4px 0 rgb(34 34 34 / 0.25) inset',  
+            inner50: '0 4px 4px 0 rgb(34 34 34 / 0.50) inset',  
         },
         },
 	},

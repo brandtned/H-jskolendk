@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-
+@layer base {
+  p {
+    @apply max-w-[70ch];
+  }
 }

@@ -51,7 +51,6 @@ import fie from "/public/imgs/fie.webp";
 
   <!-- INFOMØDE -->
   <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-start m-lg">
-   
     <div class="pr-8">
       <h2 class="text-neutrals-950 font-bold text-h2 font-headline mb-m">
         Kom til infomøde
@@ -65,38 +64,38 @@ import fie from "/public/imgs/fie.webp";
         Vi afholder infomøder i København og Aarhus – eller du kan møde os på et
         af vores online infomøder.
       </p>
- 
+
       <div class="space-y-6">
         <div>
           <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">
             KØBENHAVN
           </h4>
           <p class="text-sm m-xxxs">
-            <span class="font-bold text-orange-500">16 JANUAR 2025</span> 
+            <span class="font-bold text-orange-500">16 JANUAR 2025</span>
             <span class="font-regular text-neutrals-950">| KL. 17-19</span>
           </p>
         </div>
-    
+
         <div>
           <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">
             AARHUS
           </h4>
           <p class="text-sm m-xxxs">
-            <span class="font-bold text-orange-500">14 JANUAR 2025</span> 
+            <span class="font-bold text-orange-500">14 JANUAR 2025</span>
             <span class="font-regular text-neutrals-950">| KL. 17-19</span>
           </p>
         </div>
-    
+
         <div>
           <h4 class="text-neutrals-950 font-bold text-h4 font-headline mb-xs">
             ONLINE INFOMØDE
           </h4>
           <p class="text-sm m-xxxs">
-            <span class="font-bold text-orange-500">13 NOVEMBER 2024</span> 
+            <span class="font-bold text-orange-500">13 NOVEMBER 2024</span>
             <span class="font-regular text-neutrals-950">| KL. 17-19</span>
           </p>
           <p class="text-sm m-xxxs">
-            <span class="font-bold text-orange-500">21 JANUAR 2025</span> 
+            <span class="font-bold text-orange-500">21 JANUAR 2025</span>
             <span class="font-regular text-neutrals-950">| KL. 17-19</span>
           </p>
         </div>
@@ -104,12 +103,16 @@ import fie from "/public/imgs/fie.webp";
     </div>
 
     <div class="flex items-center justify-center px-10">
-      <form class="bg-yellow-500 py-ml px-sm w-full max-w-xl flex flex-col items-center">
+      <form
+        class="bg-yellow-500 py-ml px-sm w-full max-w-xl flex flex-col items-center"
+      >
         <!-- Overskrift -->
-        <h2 class="text-neutrals-950 font-bold text-h3 font-headline mb-sm text-center">
+        <h2
+          class="text-neutrals-950 font-bold text-h3 font-headline mb-sm text-center"
+        >
           Tilmeld dig infomødet
         </h2>
-    
+
         <!-- Input felter -->
         <div class="space-y-4 w-full">
           <input
@@ -142,9 +145,11 @@ import fie from "/public/imgs/fie.webp";
             placeholder="Hvilken destination er du interesseret i?*"
             class="w-full p-s py-4 border-none focus:ring-0 m-xxs"
           />
-          <p class="text-neutrals-950 font-regular m-xs">*Disse felter skal udfyldes / vælges</p>
+          <p class="text-neutrals-950 font-regular m-xs">
+            *Disse felter skal udfyldes / vælges
+          </p>
         </div>
-    
+
         <!-- Afkrydsningsbokse -->
         <div class="space-y-4 w-full mt-m">
           <label class="flex items-center">
@@ -170,7 +175,7 @@ import fie from "/public/imgs/fie.webp";
             </p>
           </label>
         </div>
-    
+
         <!-- Knap -->
         <div class="mt-m w-full flex justify-center">
           <Button>TILMELD DIG INFOMØDET</Button>
@@ -472,22 +477,266 @@ import fie from "/public/imgs/fie.webp";
   </section>
 
   <!-- FAQ -->
-  <section class="m-xl">
-    <h2 class="font-headline text-h2 font-bold mb-m">FAQ</h2>
-    <div
-      class="bg-neutrals-50 shadow-drop25 p-sm flex justify-between items-center"
-    >
-      <p class="text-h4">Hvad indebærer det at tage på højskole i udlandet?</p>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="31"
-        height="18"
-        viewBox="0 0 31 18"
-        fill="none"
-      >
-        <path d="M30 1L15.6818 16L1.36364 1" stroke="#FE6E1F" stroke-width="2"
-        ></path>
-      </svg>
+  <section class="m-xl mb-4xl">
+    <h2 class="font-headline text-h2 font-bold mb-m text-neutrals-950">FAQ</h2>
+    <div class="flex flex-col gap-s">
+      <div x-data="{ open: false }" class="bg-neutrals-50 shadow-drop25 p-m">
+        <!-- Spørgsmålet og pilen -->
+        <div
+          @click="open = !open"
+          class="flex justify-between items-center cursor-pointer"
+        >
+          <p class="text-h4 text-neutrals-950">
+            Hvad indebærer det at tage på højskole i udlandet?
+          </p>
+          <svg
+            class="transform transition-transform duration-200"
+            :class="open ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="18"
+            viewBox="0 0 31 18"
+            fill="none"
+          >
+            <path
+              d="M30 1L15.6818 16L1.36364 1"
+              stroke="#FE6E1F"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+
+        <!-- Indholdet, der vises/skjules -->
+        <div x-show="open" class="flex flex-col gap-xs pt-sm overflow-hidden">
+          <p class="text-neutrals-950">
+            Drømmer du om et unikt rejseeventyr, hvor fællesskab og personlig
+            udvikling er i centrum? En højskole i udlandet kombinerer spændende
+            rejseoplevelser med stærke værdier som dannelse og fællesskab.
+          </p>
+          <p class="text-neutrals-950">
+            På en rejse-højskole kan du bruge dit sabbatår på alt fra frivilligt
+            arbejde og vilde adventure- og naturoplevelser til sprogindlæring og
+            personlig udvikling.
+          </p>
+          <p class="text-neutrals-950">
+            Hvis du vil opleve verden, udleve dine rejsedrømme i et skønt
+            fællesskab og få et eventyr for livet, så er en højskole i udlandet
+            det perfekte valg for dig! Eventyret venter - er du klar til at tage
+            første skridt?
+          </p>
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-neutrals-50 shadow-drop25 p-m">
+        <!-- Spørgsmålet og pilen -->
+        <div
+          @click="open = !open"
+          class="flex justify-between items-center cursor-pointer"
+        >
+          <p class="text-h4 text-neutrals-950">
+            Hvad kan jeg forvente af et ophold i udlandet med HÖJSKOLENDK?
+          </p>
+          <svg
+            class="transform transition-transform duration-200"
+            :class="open ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="18"
+            viewBox="0 0 31 18"
+            fill="none"
+          >
+            <path
+              d="M30 1L15.6818 16L1.36364 1"
+              stroke="#FE6E1F"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+
+        <!-- Indholdet, der vises/skjules -->
+        <div x-show="open" class="flex flex-col gap-xs pt-sm overflow-hidden">
+          <p class="text-neutrals-950">
+            › Bliv en del af et fantastisk fællesskab med stærkt sammenhold.
+            <br />› Oplev vilde naturoplevelser, spændende adventure-aktiviteter
+            og unikke kulturmøder.
+            <br />› Opdag nye og stærke sider af dig selv, flyt grænser og styrk
+            din selvtillid.
+            <br />› Rejs med passionerede danske rejseledere og engagerede
+            undervisere.
+            <br />› Få et uforglemmeligt, unikt og trygt rejseeventyr for livet.
+          </p>
+          <p class="text-neutrals-950">
+            Med vores særlige kombination af højskole, grupperejser,
+            rejseeventyr, frihed, kulturmøder og inspirerende undervisning
+            hjælper vi dig med at finde frem til det, der virkelig betyder noget
+            for dig - det, du brænder for, og som giver mening i dit liv - så du
+            kan forfølge dine drømme.
+          </p>
+          <p class="text-neutrals-950">
+            Gå på opdagelse her på siden og find dit livs eventyr på højskole i
+            udlandet med HÖJSKOLENDK.
+          </p>
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-neutrals-50 shadow-drop25 p-m">
+        <!-- Spørgsmålet og pilen -->
+        <div
+          @click="open = !open"
+          class="flex justify-between items-center cursor-pointer"
+        >
+          <p class="text-h4 text-neutrals-950">
+            Hvor kan jeg høre mere om et ophold i udlandet?
+          </p>
+          <svg
+            class="transform transition-transform duration-200"
+            :class="open ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="18"
+            viewBox="0 0 31 18"
+            fill="none"
+          >
+            <path
+              d="M30 1L15.6818 16L1.36364 1"
+              stroke="#FE6E1F"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+
+        <!-- Indholdet, der vises/skjules -->
+        <div x-show="open" class="flex flex-col gap-xs pt-sm overflow-hidden">
+          <p class="text-neutrals-950">
+            Drømmer du om et rejseeventyr fyldt med adventure, vilde
+            naturoplevelser og fascinerende kulturmøder? Kom og mød os til et af
+            vores hyggelige infomøder i København eller Aarhus – eller deltag
+            nemt hjemmefra til et online infomøde.
+          </p>
+          <p class="text-neutrals-950">
+            <strong>KØBENHAVN</strong>
+            <br />16. JANUAR 2025 | KL. 17-19
+          </p>
+          <p class="text-neutrals-950">
+            <strong>AARHUS</strong>
+            <br />14. JANUAR 2025 | KL. 17-19
+          </p>
+          <p class="text-neutrals-950">
+            <strong>ONLINE INFOMØDE</strong>
+            <br />13. NOVEMBER 2024 | KL. 17-19 21.
+            <br />JANUAR 2025 | KL. 17-19
+          </p>
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-neutrals-50 shadow-drop25 p-m">
+        <!-- Spørgsmålet og pilen -->
+        <div
+          @click="open = !open"
+          class="flex justify-between items-center cursor-pointer"
+        >
+          <p class="text-h4 text-neutrals-950">
+            Hvorfor er højskole i udlandet det perfekte valg for dig?
+          </p>
+          <svg
+            class="transform transition-transform duration-200"
+            :class="open ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="18"
+            viewBox="0 0 31 18"
+            fill="none"
+          >
+            <path
+              d="M30 1L15.6818 16L1.36364 1"
+              stroke="#FE6E1F"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+
+        <!-- Indholdet, der vises/skjules -->
+        <div x-show="open" class="flex flex-col gap-xs pt-sm overflow-hidden">
+          <p class="text-neutrals-950">
+            Drømmer du om at tage på højskole i udlandet sammen med andre unge?
+          </p>
+          <p class="text-neutrals-950">
+            Med HÖJSKOLENDK får du dit livs eventyr, fyldt med fællesskab,
+            uforglemmelige oplevelser og meningsfuld læring. Et højskoleophold i
+            udlandet er en oplevelse, du kun vil fortryde ikke at have prøvet –
+            og du kan se frem til nye venskaber og minder, der varer hele livet.
+            HÖJSKOLENDK tilbyder rejsende højskoler til næsten alle hjørner af
+            verden.
+          </p>
+          <p class="text-neutrals-950">
+            Ønsker du smukke naturoplevelser på Bali, Hawaii, Maldiverne eller i
+            Australien? Storbyeventyr i New York, Tokyo, Bangkok eller Rio de
+            Janeiro? Eller måske kulturelle og autentiske møder i Indien,
+            Bolivia, Japan eller Mexico? Fra adrenalinfyldte aktiviteter i New
+            Zealand og Nepal til roligere øjeblikke i Costa Rica og Sri Lanka –
+            der er et højskoleophold for enhver drøm.
+          </p>
+          <p class="text-neutrals-950">
+            Du rejser med andre unge på din egen alder, guidet af erfarne danske
+            rejseledere og undervisere. Ud over at opleve verden og forstå nye
+            kulturer, får du også et dybere indblik i dig selv. Hjemkomsten
+            byder på større selvtillid, selvindsigt og en endnu stærkere udgave
+            af dig selv.
+          </p>
+          <p class="text-neutrals-950">
+            En højskolerejse er ikke kun et eventyr rundt om i verden – det er
+            også en livsændrende rejse i personlig udvikling.
+          </p>
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-neutrals-50 shadow-drop25 p-m">
+        <!-- Spørgsmålet og pilen -->
+        <div
+          @click="open = !open"
+          class="flex justify-between items-center cursor-pointer"
+        >
+          <p class="text-h4 text-neutrals-950">
+            Hvordan får du et uforglemmeligt højskoleophold i udlandet?
+          </p>
+          <svg
+            class="transform transition-transform duration-200"
+            :class="open ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="18"
+            viewBox="0 0 31 18"
+            fill="none"
+          >
+            <path
+              d="M30 1L15.6818 16L1.36364 1"
+              stroke="#FE6E1F"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+
+        <!-- Indholdet, der vises/skjules -->
+        <div x-show="open" class="flex flex-col gap-xs pt-sm overflow-hidden">
+          <p class="text-neutrals-950">
+            HÖJSKOLENDK tilbyder fantastiske rejseoplevelser og højskoleophold i
+            udlandet, både i løbet af året og i sommerferien. Begge muligheder
+            er utrolig populære blandt vores elever og giver dig muligheden for
+            at opleve verden på en ny og spændende måde.
+          </p>
+          <p class="text-neutrals-950">
+            Vores sommerhøjskoleophold varer typisk 5 uger, og på disse rejser
+            får du mulighed for at opleve flere lande og kulturer, langt fra det
+            danske hverdagsliv. Det er den perfekte mulighed for dig, der ønsker
+            at rejse, møde andre unge og udvikle dig personligt, inden du måske
+            starter på et nyt studie eller job.
+          </p>
+          <p class="text-neutrals-950">
+            Højskoleophold i løbet af året varer mellem 2-3 måneder og er
+            ideelle for dig, der holder sabbatår og vil bruge tid på at opleve
+            verden, samtidig med at du udvikler dig selv på et personligt plan.
+          </p>
+          <p class="text-neutrals-950">
+            Tag på højskole i udlandet med andre og få en uforglemmelig
+            oplevelse. Vi lover, at det bliver dit livs eventyr!
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
