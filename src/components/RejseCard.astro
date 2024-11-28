@@ -1,78 +1,124 @@
 ---
 import Button from "../components/Button.astro";
+
+const {
+  cardimage = "",
+  cardimagealt = "",
+
+  badgenyt = "false",
+  badgerabat = "false",
+  badgerabatsats = "",
+  badgefaapladser = "false",
+
+  rejsenavn = "",
+  varighed = "",
+  afrejsedatoer = "",
+  pris = "",
+} = Astro.props;
 ---
 
-<article class="bg-neutrals-50 shadow-drop25 m-lg flex flex-row">
-  <img
-    src="/public/imgs/caribien.webp"
-    alt=""
-    class="object-cover h-8xl w-full"
-  />
-  <p class="font-headline text-h3 font-bold text-neutrals-950">
-    CARIBIEN, HAWAII & MEXICO
-  </p>
-  <div class="flex gap-m">
-    <div>
-      <div class="flex items-center gap-xxs">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          width="23"
-          fill="rgba(254, 110, 31, 1)"
-          ><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-          ></path></svg
-        >
-        <p class="font-headline text-h6 font-bold text-neutrals-950">
-          VARIGHED:
-        </p>
+<article class="bg-neutrals-50 shadow-drop25 m-lg flex flex-row h-9xl relative">
+  <img src="/public/imgs/caribien.webp" alt="" class="object-cover w-[450px]" />
+
+  <div class="flex flex-col gap-lg p-sm">
+    <div class="flex flex-col gap-sm">
+      <p class="font-headline text-h3 font-bold text-neutrals-950">
+        CARIBIEN, HAWAII & MEXICO
+      </p>
+
+      <div class="flex gap-m">
+        <div>
+          <div class="flex items-center gap-xxs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              width="23"
+              fill="rgba(254, 110, 31, 1)"
+              ><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+              ></path></svg
+            >
+            <p class="font-headline text-h6 font-bold text-neutrals-950">
+              VARIGHED:
+            </p>
+          </div>
+          <p class="pl-sm">3 måneder</p>
+        </div>
+        <div>
+          <div class="flex items-center gap-xxs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+              width="24"
+              fill="rgba(254, 110, 31, 1)"
+              ><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.3 11.2l137.7 0c5 0 9.9-1.2 14.3-3.4L535.6 212.2c46.5-23.3 82.5-63.3 100.8-112C645.9 75 627.2 48 600.2 48l-57.4 0c-20.2 0-40.2 4.8-58.2 14L381 114.9zM0 480c0 17.7 14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"
+              ></path></svg
+            >
+            <p class="font-headline text-h6 font-bold text-neutrals-950">
+              AFREJSEDATOER:
+            </p>
+          </div>
+          <p class="pl-sm">20. okt 2024</p>
+        </div>
+        <div>
+          <div class="flex items-center gap-xxs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              width="23"
+              fill="rgba(254, 110, 31, 1)"
+              ><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5l0 39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9l0 39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7l0-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
+              ></path></svg
+            >
+            <p class="font-headline text-h6 font-bold text-neutrals-950">
+              PROGRAM:
+            </p>
+          </div>
+          <div class="flex gap-xxxs pl-sm">
+            <p class="font-semibold">Introdage:</p>
+            <p>New York City, USA</p>
+          </div>
+          <div class="flex gap-xxxs pl-sm">
+            <p class="font-semibold">1. måned:</p>
+            <p>Oahu, Hawaii</p>
+          </div>
+          <div class="flex gap-xxxs pl-sm">
+            <p class="font-semibold">2. måned:</p>
+            <p>Playa del Carmen, Mexico</p>
+          </div>
+          <div class="flex gap-xxxs pl-sm">
+            <p class="font-semibold">3. måned:</p>
+            <p>St. Croix & Puerto Rico, Caribien</p>
+          </div>
+          <div class="flex gap-xxxs pl-sm">
+            <p class="font-semibold">Uge 4:</p>
+            <p>Friuge</p>
+          </div>
+        </div>
       </div>
-      <p class="pl-sm">3 måneder</p>
     </div>
-    <div>
-      <div class="flex items-center gap-xxs">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          width="23"
-          fill="rgba(254, 110, 31, 1)"
-          ><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-          ></path></svg
-        >
-        <p class="font-headline text-h6 font-bold text-neutrals-950">
-          VARIGHED:
-        </p>
+
+    <div class="flex flex-col gap-sm absolute bottom-sm">
+      <div class="flex flex-col gap-xxs">
+        <div class="flex flex-col gap-xxxs">
+          <p class="font-headline text-h6 font-bold text-neutrals-950">
+            PRIS FRA:
+          </p>
+          <p class="text-h3 font-semibold text-neutrals-950">67.900 DKK</p>
+        </div>
+        <p class="font-extralight italic">Flybillet tur/retur er inkluderet.</p>
       </div>
-      <p class="pl-sm">3 måneder</p>
-    </div>
-    <div>
-      <div class="flex items-center gap-xxs">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          width="23"
-          fill="rgba(254, 110, 31, 1)"
-          ><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-          ></path></svg
-        >
-        <p class="font-headline text-h6 font-bold text-neutrals-950">
-          VARIGHED:
-        </p>
-      </div>
-      <p class="pl-sm">3 måneder</p>
+
+      <p class="flex gap-xs">
+        <Button>Tilmeld infomøde</Button>
+        <Button variant="secondary">Undgå udsolgt</Button>
+        <Button variant="secondary">Læs mere om opholdet</Button>
+      </p>
     </div>
   </div>
-  <div class="flex flex-col gap-xxs">
-    <div class="flex flex-col gap-xxxs">
-      <p class="font-headline text-h6 font-bold text-neutrals-950">PRIS FRA:</p>
-      <p class="text-h3 font-semibold text-neutrals-950">67.900 DKK</p>
-    </div>
-    <p class="font-extralight italic">Flybillet tur/retur er inkluderet.</p>
-  </div>
-  <Button>Button</Button>
 </article>
