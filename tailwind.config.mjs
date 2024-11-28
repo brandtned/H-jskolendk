@@ -7,7 +7,9 @@ export default {
 	theme: {
         // Hvis du placerer noget herinde, så vil du erstatte Tailwinds styling.
 
-        /* COLORS */
+		extend: {
+            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
+            /* COLORS */
         colors: {
             "yellow-950": "rgba(39, 30, 7, 1)",
             "yellow-900": "rgba(83, 63, 14, 1)",
@@ -124,9 +126,6 @@ export default {
             inner25: '0 4px 4px 0 rgb(0 0 0 / 0.25) inset',  
             inner50: '0 4px 4px 0 rgb(0 0 0 / 0.50) inset',  
         },
-
-		extend: {
-            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
         },
 	},
 	plugins: [

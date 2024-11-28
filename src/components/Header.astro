@@ -1,5 +1,93 @@
 ---
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import logo from "/public/imgs/logo.svg";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div
+  class="flex items-center h-fit w-full bg-cover bg-top absolute top-0"
+  style="background-image: url('/src/assets/images/baggrund.webp')"
+>
+  <div
+    x-data="{ showmenu: false }"
+    class="static top-0 w-full bg-transparent z-50"
+  >
+    <div id="navbar" class="flex flex-row justify-between items-center">
+      <!-- Logo -->
+      <div id="logo" class="p-s">
+        <a href="#hero"><Image src={logo} alt="Plastic Change logo" /></a>
+      </div>
+
+      <!-- Burger menu -->
+      <button
+        id="burgermenu"
+        class="z-50 p-xs cursor-pointer"
+        x-on:click="showmenu = ! showmenu"
+      >
+        <!-- Burger icon -->
+        <svg
+          x-show="!showmenu"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.2"
+          stroke="rgba(250, 243, 225, 1)"
+          class="size-10"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+
+        <!-- Cross icon -->
+        <svg
+          x-show="showmenu"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.2"
+          stroke="rgba(250, 243, 225, 1)"
+          class="size-10"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobil menu -->
+    <nav
+      id="mobilmenu"
+      class="flex flex-col gap-6 bg-orange-500 h-screen w-9xl pl-14 pt-24 absolute top-0 z-10 right-0"
+      x-show="showmenu"
+      x-transition
+      x-on:click="showmenu = false"
+      x-on:click.outside="showmenu = false"
+    >
+      <ul>
+        <li class="py-3">
+          <Link href="#plastikforurening" size="small">Rejsepakker</Link>
+        </li>
+        <li class="py-3">
+          <Link href="#problemet" size="small">Infomøder</Link>
+        </li>
+        <li class="py-3">
+          <Link href="#gør_en_forskel" size="small">Rejseblogs</Link>
+        </li>
+        <li class="py-3">
+          <Link href="#vores_indsats" size="small">Rejse med Höjskolen</Link>
+        </li>
+        <li class="py-3">
+          <Link href="#merchandise" size="small">Om os</Link>
+        </li>
+        <li class="py-3">
+          <Link href="#merchandise" size="small">FAQ</Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
