@@ -6,10 +6,7 @@ export default {
 
 	theme: {
         // Hvis du placerer noget herinde, så vil du erstatte Tailwinds styling.
-
-		extend: {
-            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
-            /* COLORS */
+        /* COLORS */
         colors: {
             "yellow-950": "rgba(39, 30, 7, 1)",
             "yellow-900": "rgba(83, 63, 14, 1)",
@@ -47,29 +44,8 @@ export default {
             'white': '#fff',
             'black': '#000',
           },
-
-          /* SPACING */
-          spacing: {
-            "xxxs": "4px",
-            "xxs": "8px",
-            "xs": "16px",
-            "s": "24px",
-            "sm": "32px",
-            "m": "40px",
-            "ml": "48px",
-            "lg": "64px",
-            "xl": "80px",
-            "2xl": "96px",
-            "3xl": "112px",
-            "4xl": "128px",
-            "5xl": "160px",
-            "6xl": "208px",
-            "7xl": "320px",
-            "8xl": "360px",
-            "9xl": "424px"
-          },
-
-        /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
+                  
+          /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
         /* FONTE */
         fontFamily: {
             sans: ['Montserrat', 'sans-serif'],
@@ -96,6 +72,30 @@ export default {
             regular: '400',
             semibold: '500',
             bold: '700',
+          },
+
+		extend: {
+            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
+
+          /* SPACING */
+          spacing: {
+            "xxxs": "4px",
+            "xxs": "8px",
+            "xs": "16px",
+            "s": "24px",
+            "sm": "32px",
+            "m": "40px",
+            "ml": "48px",
+            "lg": "64px",
+            "xl": "80px",
+            "2xl": "96px",
+            "3xl": "112px",
+            "4xl": "128px",
+            "5xl": "160px",
+            "6xl": "208px",
+            "7xl": "320px",
+            "8xl": "360px",
+            "9xl": "424px"
           },
 
         /* BORDERWIDTH */
