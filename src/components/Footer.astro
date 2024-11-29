@@ -3,29 +3,28 @@ import { Image } from "astro:assets";
 import logo from "/public/imgs/logo.svg";
 ---
 
-<footer class="bg-orange-500 text-yellow-500 py-2xl">
+<footer class="bg-orange-500 text-yellow-500 py-2xl relative">
   <div
     class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
   >
     <!-- Højskolendk Section -->
-    <div class="flex flex-col gap-xl">
+    <div class="flex flex-col lg:gap-lg">
       <div>
-        <h3 class="text-h3 font-semibold font-headline font-h3 py-s">
+        <h3 class="text-h3 font-semibold font-headline font-h3 pb-s">
           HØJSKOLENDK
         </h3>
-        <p class="mt-2">
+        <p class="">
           Rosenørns Allé 29<br />
           1970 Frederiksberg<br />
           Danmark
         </p>
       </div>
-      <a href="/"><Image src={logo} alt="Højskolendk logo" /></a>
     </div>
 
     <!-- Kontakt Section -->
     <div>
-      <h3 class="text-h3 font-semibold font-headline font-h3 py-s">KONTAKT</h3>
-      <p class="mt-2">
+      <h3 class="text-h3 font-semibold font-headline font-h3 pb-s">KONTAKT</h3>
+      <p class="">
         Telefon: 70 27 90 07<br />
         Mandag til Fredag <br />
         Kl. 10.00-16.00<br />
@@ -37,8 +36,8 @@ import logo from "/public/imgs/logo.svg";
 
     <!-- SOME Section -->
     <div>
-      <h3 class="text-h3 font-semibold font-headline font-h3 py-s">SOME</h3>
-      <div class="mt-4 flex gap-xs justify-center md:justify-start space-x-4">
+      <h3 class="text-h3 font-semibold font-headline font-h3 pb-s">SOME</h3>
+      <div class="flex gap-xs justify-center md:justify-start space-x-4">
         <!-- ikoner (skal sættes ind) -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -93,5 +92,12 @@ import logo from "/public/imgs/logo.svg";
         >
       </div>
     </div>
+    <a href="/"
+      ><Image
+        src={logo}
+        alt="Højskolendk logo"
+        class="lg:absolute lg:bottom-lg m-m lg:m-0"
+      /></a
+    >
   </div>
 </footer>

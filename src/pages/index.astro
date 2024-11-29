@@ -29,9 +29,9 @@ import fie from "/public/imgs/fie.webp";
       </div>
 
       <div
-        class="w-full max-w-[781px] h-auto text-left absolute top-[50%] left-0 p-4 sm:p-6 md:p-8 transform -translate-y-1/2 ml-xl"
+        class="w-full max-w-[781px] h-auto text-left absolute top-[50%] left-0 p-4 sm:p-6 md:p-8 transform -translate-y-1/2 lg:ml-xl"
       >
-        <h1 class="font-headline text-h1">Højskole i <br />udlandet</h1>
+        <h1 class="font-headline text-h2 lg:text-h1">Højskole i udlandet</h1>
 
         <hr
           class="my-4 border-t-2 border-orange-500"
@@ -43,7 +43,7 @@ import fie from "/public/imgs/fie.webp";
           />Vi brænder for oplevelser, fællesskab og mødet med nye mennesker <br
           /> og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet.
         </h5>
-        <div class="flex gap-s">
+        <div class="flex flex-col lg:flex-row gap-s">
           <Button>FIND DIN REJSE</Button>
           <Button variant="secondary2">TILMELD INFOMØDE</Button>
         </div>
@@ -52,8 +52,10 @@ import fie from "/public/imgs/fie.webp";
   </section>
 
   <!-- REJSEPAKKER -->
-  <section class="flex flex-col gap-m mb-4xl">
-    <div class="flex justify-between items-center mx-lg">
+  <section class="flex flex-col gap-s mb-4xl h-fit">
+    <div
+      class="flex flex-col lg:flex-row gap-m lg:gap-0 items-start lg:justify-between lg:items-center mx-s lg:mx-s"
+    >
       <h2 class="font-headline font-bold text-h2 text-neutrals-950">
         Vores rejsepakker
       </h2>
@@ -92,7 +94,7 @@ import fie from "/public/imgs/fie.webp";
         </div>
       </div>
     </div> -->
-    <div>
+    <div class="m-s">
       <RejseCard
         cardimage="/public/imgs/caribien.webp"
         cardimagealt="Unge mennesker der vandrer på en klippe foran en strand"
@@ -358,7 +360,7 @@ import fie from "/public/imgs/fie.webp";
 
     <!-- teambuilding -->
     <div class="flex justify-center items-center m-s">
-      <div class="bg-yellow-500 p-6 flex gap-4 items-start max-w-7xl">
+      <div class="bg-yellow-500 p-6 lg:flex gap-4 items-start max-w-7xl">
         <div class="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -389,7 +391,7 @@ import fie from "/public/imgs/fie.webp";
 
     <!-- frivilligt arbejde og kulturforståelse -->
     <div class="flex justify-center items-center m-s">
-      <div class="bg-yellow-500 p-6 flex gap-4 items-start max-w-7xl">
+      <div class="bg-yellow-500 p-6 lg:flex gap-4 items-start max-w-7xl">
         <div class="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -418,7 +420,7 @@ import fie from "/public/imgs/fie.webp";
 
     <!-- friuger - et valg af muligheder -->
     <div class="flex justify-center items-center m-s">
-      <div class="bg-yellow-500 p-6 flex gap-4 items-start max-w-7xl">
+      <div class="bg-yellow-500 p-6 lg:flex gap-4 items-start max-w-7xl">
         <div class="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -449,7 +451,7 @@ import fie from "/public/imgs/fie.webp";
 
     <!-- vilde naturoplevelser -->
     <div class="flex justify-center items-center m-s">
-      <div class="bg-yellow-500 p-6 flex gap-4 items-start max-w-7xl">
+      <div class="bg-yellow-500 p-6 lg:flex gap-4 items-start max-w-7xl">
         <div class="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -483,7 +485,7 @@ import fie from "/public/imgs/fie.webp";
 
     <!-- spændende kulturoplevelser -->
     <div class="flex justify-center items-center m-s">
-      <div class="bg-yellow-500 p-6 flex gap-4 items-start max-w-7xl">
+      <div class="bg-yellow-500 p-6 lg:flex gap-4 items-start max-w-7xl">
         <div class="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -516,7 +518,7 @@ import fie from "/public/imgs/fie.webp";
 
   <!-- OM OS -->
   <section
-    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center m-lg"
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center lg:m-lg"
     id="om_os"
   >
     <div>
@@ -545,7 +547,7 @@ import fie from "/public/imgs/fie.webp";
       </div>
     </div>
 
-    <div class="m-lg relative">
+    <div class="lg:m-lg relative">
       <Image
         src={om_os}
         alt="Højskoleelever der vinker i naturen"
@@ -556,7 +558,7 @@ import fie from "/public/imgs/fie.webp";
   </section>
 
   <!-- FAQ -->
-  <section class="m-xl mb-4xl" id="faq">
+  <section class="m-xxs lg:m-xl mb-4xl" id="faq">
     <h2 class="font-headline text-h2 font-bold mb-m text-neutrals-950">FAQ</h2>
     <div class="flex flex-col gap-s">
       <div x-data="{ open: false }" class="bg-neutrals-50 shadow-drop25 p-m">
@@ -822,21 +824,21 @@ import fie from "/public/imgs/fie.webp";
   <!-- ANMELDELSER -->
 
   <section class="mb-4xl" id="anmeldelser">
-    <div class="m-lg relative">
+    <div class="lg:m-lg relative">
       <!-- Billede -->
       <div class="relative">
         <img
           src="/public/imgs/caribien.webp"
           alt="caribien"
-          class="object-cover object-top w-full h-[300px] sm:h-[400px] md:h-[500px]"
+          class="object-cover object-top w-full h-fit lg:h-[500px]"
         />
         <div class="absolute inset-0 bg-orange-500-filter"></div>
       </div>
       <!-- Overlay -->
       <div
-        class="w-full max-w-[781px] h-auto bg-neutrals-50 text-center absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] p-4 sm:p-6 md:p-8"
+        class="lg:w-full w-full lg:max-w-[781px] h-fit bg-neutrals-50 text-center absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] p-4 sm:p-6 md:p-8"
       >
-        <div class="m-lg mt-2xl">
+        <div class="lg:m-lg lg:mt-2xl">
           <!-- Overskrift -->
           <h4
             class="text-h5 sm:text-h4 text-neutrals-950 font-bold font-headline mb-sm"

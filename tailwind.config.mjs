@@ -55,13 +55,13 @@ export default {
 
         /* FONTSIZE */
         fontSize: {
-            form: ['14px', { lineHeight: '1.5rem' }],
-            button: ['15px', { lineHeight: '1.5rem' }],
-            body: ['16px', { lineHeight: '1.5rem' }],
-            h6: ['16px', { lineHeight: '1.5rem' }],
-            h5: ['20px', { lineHeight: '1.5rem' }],
-            h4: ['25px', { lineHeight: '1.5rem' }],
-            h3: ['35px', { lineHeight: '1.5rem' }],
+            form: ['14px', { lineHeight: '150%' }],
+            button: ['15px', { lineHeight: '150%' }],
+            body: ['16px', { lineHeight: '150%' }],
+            h6: ['16px', { lineHeight: '150%' }],
+            h5: ['20px', { lineHeight: '150%' }],
+            h4: ['25px', { lineHeight: '150%' }],
+            h3: ['35px', { lineHeight: '150%' }],
             h2: ['50px', { lineHeight: '120%' }],
             h1: ['80px', { lineHeight: '120%' }],
           },
@@ -96,7 +96,8 @@ export default {
             "6xl": "208px",
             "7xl": "320px",
             "8xl": "360px",
-            "9xl": "424px"
+            "9xl": "424px",
+            "10xl": "460px",
           },
 
         /* BORDERWIDTH */
